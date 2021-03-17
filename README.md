@@ -1,12 +1,9 @@
-# Cliphant
-#### Just another clipboard manager
-_Subject to change in an agile fashion..._
+# Ohjelmistotekniikka, harjoitustyö
 
-This is yours truly's course project for a **HY** course called *Ohjelmistotekniikka* (spring 2021).
+## Tehtävät
 
-### Features:
-* Spy on your clipboard and:
-  * Save everything
-  * Index the contents (if possible)
-  * Provide search and editing
+### Viikko 1
 
+[gitlog.txt](https://github.com/algoholik/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
+
+[komentorivi.txt](https://github.com/algoholik/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
