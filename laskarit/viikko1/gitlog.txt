@@ -1,0 +1,124 @@
+commit 491fe3065998fbaa8ea03caf328640fa48000c52
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 10:04:09 2021 +0200
+
+    file22 mukaan muutoksiin :D
+
+ tiedostoja/file22 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e967d5dbd322b553d9dd2efbf3416c77749d9d82
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 10:03:37 2021 +0200
+
+    paljon muutoksia fileihin.
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 1 +
+ 3 files changed, 1 insertion(+)
+
+commit 894137887da9725c0d72e4ad8e9f14a4fc9a075b
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 10:00:46 2021 +0200
+
+    lisää tiedostoja...
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit cdf4e544c7a1d550e9d3731f2762d9993d7f380f
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:52:03 2021 +0200
+
+    muuteltiin tiedostoja eka.txt ja kolmas.txt
+
+ eka.txt    | 2 --
+ kolmas.txt | 1 +
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+commit 192c4e09dc00f1acfb1949dcc7a1df41e7711ffb
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:49:52 2021 +0200
+
+    tiedosto.txt uudelleennimetty eka.txt:ksi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8efa9ebea314394732ab1255b3b00d24a6c3d8d9
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:46:56 2021 +0200
+
+    poistettiin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ae3fb5b842c4ad63d6ffe35902a0318855c66ff1
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:45:13 2021 +0200
+
+    tiedosto.txt:stä poistettu tekstiä
+
+ tiedosto.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit a588c59d6b9bbe0df855e4226cabd3396d7679fc
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:43:49 2021 +0200
+
+    lisätty tiedosto.txt:hen paljon tekstiä
+
+ tiedosto.txt | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit b1052a5cfb0eb2e20f590dc11615c627d97a4070
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:36:11 2021 +0200
+
+    uusi kansio tiedostoineen luotu
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6856aa4907fd6bd82f2f4428ab299358b3341e25
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:35:29 2021 +0200
+
+    muutettiin toisen ja kolmannen tiedoston sisältöjä
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit b45342bba6e61b45cb2674f685ef1814d82d333c
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:34:00 2021 +0200
+
+    kolmas lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 334afa8923c10a6eadc34bde4f0651d2f0f07088
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:27:40 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit e45004d7bd49790e3df472a3830d52af8aaa4d73
+Author: J.Valkonen <johannes.valkonen@helsinki.fi>
+Date:   Wed Mar 17 09:24:56 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
