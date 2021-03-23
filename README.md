@@ -1,6 +1,7 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Modular Notes App
+## Ohjelmistotekniikka, harjoitustyö
 
-Alustava idea on tehdä clipboard manager, joka tarjoaa leikepöytähistorian ja työkaluja sen hallinnoimiseen (saattaa muuttua, jos ilmenee sudenkuoppia...).
+Alustava idea on tehdä muistiinpanosovellus, joka tarjoaa mielenkiintoisia tapoja lähestyä ja hallita muistiinpanoja (saattaa muuttua, jos ilmenee sudenkuoppia...).
 
 ## Tehtävät
 
