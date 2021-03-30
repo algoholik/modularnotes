@@ -4,7 +4,7 @@ Eli tuttavallisemmin *MoNoA*, on modulaarinen muistiinpanosovellus, jossa käytt
 muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (documents) pienistä palasista
 (snippets).
 
-[Alustava vaatimusmäärittely]
+[Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md) (alustava)
 
 ## Tehtävät
 
