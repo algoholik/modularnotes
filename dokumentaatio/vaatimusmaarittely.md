@@ -9,9 +9,11 @@ päivittyvät kaikki sen instanssit kaikissa muissakin muistiinpanoissa joissa s
 
 MoNoA soveltuu ajatustyöhön, jossa käytetään toistuvasti samoja pienempiä elementtejä, ja siksi se soveltuu hyvin esimerkiksi tehtävä- ja ostoslistojen tekemiseen, tai vaikkapa koodinpätkien hallinnointiin.
 
+
 ## Käyttäjät
 
 Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli eli _normaali käyttäjä_. Myöhemmin sovellukseen saatetaan lisätä joko mahdollisuus suojata yksittäisiä muistiinpanoja salasanalla, tai kokonaan usean käyttäjän mahdollistava _käyttäjätilien hallinta_.
+
 
 ## Käyttöliittymäluonnos
 
@@ -44,7 +46,7 @@ Perusversion jälkeen MoNoAa voisi jatkokehittää ominaisuuksilla kuten:
 - Useita erilaisia snippettejä:
   - Teksti
   - Todo-listaus
-  - Kaava
+  - Laskukaava
   - Dynaaminen linkki (esim. kalenterimerkintään)
 - Käyttäjä voisi löytää helposti muita samankaltaisia muistiinpanoja:
   - Muistiinpanot joissa esiintyy eniten samoja snippettejä
@@ -54,3 +56,5 @@ Perusversion jälkeen MoNoAa voisi jatkokehittää ominaisuuksilla kuten:
   - html
   - pdf
 - Salasanasuojatut muistiinpanot
+- Mahdollisuus jakaa muistiinpanoja muille käyttäjille
+- Jaetut muistiinpanot usean käyttäjän kesken
