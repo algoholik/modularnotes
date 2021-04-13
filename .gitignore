@@ -20,3 +20,7 @@ __pycache__
 /laskarit/viikko2/unicafe/src/tests/__pycache__/
 /laskarit/viikko2/unicafe/.coverage
 /laskarit/viikko2/unicafe/htmlcov
+/laskarit/viikko2/maksukortti/src/__pycache__/
+/laskarit/viikko2/maksukortti/src/tests/__pycache__/
+/laskarit/viikko2/maksukortti/.coverage
+/laskarit/viikko2/maksukortti/htmlcov
