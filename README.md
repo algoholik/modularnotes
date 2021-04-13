@@ -5,9 +5,19 @@ muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (docum
 (snippets).
 
 
+## Tilannekatsaus ti 13.4.2021 klo 23.xx
+
+- Ohjelman voi onnistuneesti suorittaa (kunhan ensin alustaa buildilla...)
+- Käyttäjä voi luoda uusia snippettejä
+- Käyttäjä voi katsoa jo luotuja snippetteja listasta
+- Snippetit tallentuvat sqlite3-tietokantaan
+- Testikattavuus Snippet-luokan suhteen 100 %
+
+
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
+- [Tuntikirjanpito](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 
 ## Asennus
@@ -53,4 +63,4 @@ poetry run invoke coverage-report
 ```
 
 
-Raportti generoituu _htmlcov_-hakemistoon.
+Raportti generoituu projektin juurihakemistoon kansion _htmlcov_ alle.

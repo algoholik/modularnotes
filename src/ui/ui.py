@@ -16,8 +16,8 @@ class UI:
 
     def start(self):
         def _update_snippet():
-            print(self.active_snippet_id.get(), self.active_snippet_txt.get(1.0, "end-1c"))
-            m_service.update_snippet(self.active_snippet_id.get(), self.active_snippet_txt.get(1.0, "end-1c"))
+            print(self.active_snippet_id.get(), self.active_snippet_txt.get())
+            m_service.update_snippet(self.active_snippet_id.get(), self.active_snippet_txt.get())
             _update_snippet_list()
 
         def _new_snippet():
