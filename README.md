@@ -1,21 +1,49 @@
-# Modular Notes App
+# Modular Notes App 0.1.0
 
 Eli tuttavallisemmin *MoNoA*, on modulaarinen muistiinpanosovellus, jossa käyttäjä hallinnoi
 muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (documents) pienistä palasista
 (snippets).
 
-- [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md) 
+## Dokumentaatio
 
+- [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-## Tehtävät
+## Asennus
 
-### Viikko 1
+1. Asenna ensin riippuvuudet:
+```bash
+poetry install
+```
 
-- [gitlog.txt](https://github.com/algoholik/modularnotes/blob/main/laskarit/viikko1/gitlog.txt)
-- [komentorivi.txt](https://github.com/algoholik/modularnotes/blob/main/laskarit/viikko1/komentorivi.txt)
+2. Suorita vaadittavat alustukset:
+```bash
+poetry run invoke build
+```
 
-### Viikko 2
+3. Käynnistä MoNoA-sovellus:
+```bash
+poetry run invoke start
+```
 
-- [Alustava määrittelydokumentti](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md) 
-- [Työaikakirjanpito](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/tuntikirjanpito.md)
-- [laskarit/viikko2/](https://github.com/algoholik/modularnotes/tree/main/laskarit/viikko2)
+## Ohjelman suorittaminen
+
+Ohjelman pystyy suorittamaan komennolla:
+```bash
+poetry run invoke start
+```
+
+## Testaus
+
+### Testit 
+Testit saa ajettua komennolla:
+```bash
+poetry run invoke test
+```
+
+### Testikattavuus
+Testikattavuusraportin voi generoida komennolla:
+```bash
+poetry run invoke coverage-report
+```
+
+Raportti generoituu _htmlcov_-hakemistoon.
