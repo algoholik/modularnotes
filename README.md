@@ -4,9 +4,11 @@ Eli tuttavallisemmin *MoNoA*, on modulaarinen muistiinpanosovellus, jossa käytt
 muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (documents) pienistä palasista
 (snippets).
 
+
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
+
 
 ## Asennus
 
@@ -25,14 +27,17 @@ poetry run invoke build
 poetry run invoke start
 ```
 
+
 ## Ohjelman suorittaminen
 
-Ohjelman pystyy suorittamaan komennolla:
+Ohjelma suoritetaan komennolla:
 ```bash
 poetry run invoke start
 ```
 
+
 ## Testaus
+
 
 ### Testit 
 Testit saa ajettua komennolla:
@@ -40,10 +45,12 @@ Testit saa ajettua komennolla:
 poetry run invoke test
 ```
 
+
 ### Testikattavuus
 Testikattavuusraportin voi generoida komennolla:
 ```bash
 poetry run invoke coverage-report
 ```
+
 
 Raportti generoituu _htmlcov_-hakemistoon.
