@@ -9,9 +9,9 @@ def drop_tables(connection):
 
 def create_tables(connection):
     cursor = connection.cursor()
-    cursor.execute("create table notes (id integer primary key, note text, created datetime);")
-    cursor.execute("create table snippets (id integer primary key, snippet text, created datetime);")
-    cursor.execute("create table tags (id integer primary key, tag text unique, created datetime);")
+    cursor.execute("create table notes (id integer primary key, note text, updated datetime);")
+    cursor.execute("create table snippets (id integer primary key, snippet text, updated datetime);")
+    cursor.execute("create table tags (id integer primary key, tag text unique, updated datetime);")
     connection.commit()
 
 def db_init():
