@@ -2,33 +2,11 @@ from datetime import datetime
 #from PyQt5.QtGui import *
 #from PyQt5.QtCore import *
 from PyQt5.QtWidgets import (
-    QLabel,
-    QListView,
-    QListWidget, 
-    QMainWindow,
-    QStatusBar,
-    QCheckBox,
-    QShortcut,
-    QComboBox,
-    QLineEdit,
-    QMenu,
-    QAction,
-    QTabWidget,
-    QDockWidget,
-    QFormLayout,
-    QWidget,
-    QCompleter,
-    QSpacerItem,
-    QScrollArea,
-    QSizePolicy,
-    QHBoxLayout,
-    QStackedLayout,
-    QHeaderView,
-    QTableView,
-    QTextEdit,
-    QPlainTextEdit,
-    QToolBar,
-    QPushButton,
+    QLabel,         QListWidget,        QMainWindow,
+    QStatusBar,     QLineEdit,          QMenu,
+    QAction,        QTabWidget,         QDockWidget,
+    QFormLayout,    QWidget,            QHBoxLayout,
+    QTextEdit,      QToolBar,           QPushButton,
     QVBoxLayout
     )
 from services.monoa_service import monoa_service
