@@ -1,1 +1,1 @@
-(./kuvat/pakkauskaavio.png)
+![Pakkausrakenne ja luokat](./kuvat/pakkauskaavio.png)
