@@ -100,8 +100,8 @@ class MonoaService:
         for snip in self.snips:
             snips_sortable[snip.get_timestamp()] = snip
         self.snips.clear()
-        for snip in sorted(snips_sortable.values(), reverse=True):
-            self.snips.append(snip)
+        for key, value in sorted(snips_sortable.items(), reverse=True):
+            self.snips.append(value)
 
     def _sort_notes(self):
         ''' Keep self.notes sorted descending by the timestamp'''
@@ -109,8 +109,8 @@ class MonoaService:
         for note in self.notes:
             notes_sortable[note.get_timestamp()] = note
         self.notes.clear()
-        for note in sorted(notes_sortable.values(), reverse=True):
-            self.notes.append(note)
+        for key, value in sorted(notes_sortable.items(), reverse=True):
+            self.notes.append(value)
 
 # One and only instance of this class
 monoa_service = MonoaService()

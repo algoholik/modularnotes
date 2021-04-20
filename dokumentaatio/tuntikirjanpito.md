@@ -12,4 +12,9 @@
 |  6.4. |       6 | sisältöluokkien ja tallennus/lataus -ominaisuuksien hahmottelua |
 | 12.4. |       2 | sovelluslogiikan jalostamista |
 | 13.4. |      10 | tallennusfunktioiden ja käyttöliittymäkoodin refaktorointia |
-|  Yht. |    43.5 | | 
+| 14.4. |       6 | käyttöliittymäkirjaston vaihto tkinter -> PyQt5 |
+| 15.4. |       4 | käyttöliittymän uusiksi kirjoittamista pyqt:llä |
+| 18.4. |       2 | tietokantarepositorion puhtaaksikirjoittamista |
+| 19.4. |       5 | käyttöliittymämetodien refaktorointia, testien kirjoittamista |
+| 20.4. |       7 | käyttöliittymämetodien refaktorointia, testien kirjoittamista |
+|  Yht. |    66.5 | | 

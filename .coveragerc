@@ -1,11 +1,5 @@
 [run]
 source  =   src/
-omit    =  laskarit/**,
+omit    =   laskarit/**,
             src/tests/**,
-            src/ui/**,
-            src/services/**,
-            src/index.py,
-            src/config.py,
-            src/build.py,
-            src/demo.py,
-            src/utils.py
+            src/ui/**

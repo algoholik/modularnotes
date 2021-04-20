@@ -5,18 +5,20 @@ muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (docum
 (snippets).
 
 
-## Tilannekatsaus ti 13.4.2021 klo 23.xx
+## Tilannekatsaus ti 20.4.2021
 
-- Ohjelman voi onnistuneesti suorittaa (kunhan ensin alustaa buildilla...)
+- Ohjelman voi onnistuneesti buildaa ja starttaa
+- Ulkoasu kehittynyt huomattavasti
 - Käyttäjä voi luoda uusia snippettejä
 - Käyttäjä voi katsoa jo luotuja snippetteja listasta
 - Snippetit tallentuvat sqlite3-tietokantaan
-- Testikattavuus Snippet-luokan suhteen 100 %
+- Testien haarautumakattavuus
 
 
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
+- [Arkkitehtuurikuvaus](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/arkkitehtuuri.md)
 - [Tuntikirjanpito](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 
@@ -30,6 +32,10 @@ poetry install
 2. Suorita vaadittavat alustukset:
 ```bash
 poetry run invoke build
+```
+(2.1. Vaihtoehtoisesti voit alustaa sovelluksen esimerkkisisällöllä demoamistarkoituksiin:)
+```bash
+poetry run invoke build-demo
 ```
 
 3. Käynnistä MoNoA-sovellus:
