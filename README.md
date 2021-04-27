@@ -16,6 +16,11 @@ muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (notes
 - Kaikki tallentuu reaaliajassa sqlite3-tietokantaan
 
 
+## Uusin Release
+
+- [Release Viikko 5](https://github.com/algoholik/modularnotes/releases/tag/viikko5)
+
+
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
