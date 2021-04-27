@@ -1,20 +1,19 @@
-# Modular Notes App 0.2.0
+# Modular Notes App 0.3.0
 
 Eli tuttavallisemmin *MoNoA*, on modulaarinen muistiinpanosovellus, jossa käyttäjä hallinnoi
-muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (documents) pienistä palasista
-(snippets).
+muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (notes) pienistä palasista
+(snips).
 
 
 ## Tilannekatsaus ti 27.4.2021
 
-- Ohjelman voi onnistuneesti buildaa ja starttaa
-- Ohjelman voi halutessaan populoida demo-sisällöllä (kts. asennusohjeet)
-- Ulkoasu kehittynyt huomattavasti (tkinter vaihdettu -> pyqt5)
-- Käyttäjä voi katsoa jo luotoja noteseja ja snippettejä listalla
-- Notesit ja Snippetit on tallennettu sqlite3-tietokantaan
-- Ei voi tehdä uusia noteseja tai snippettejä...
-- ...eikä mitään ei voi kuitenkaan luoda tällä hetkellä
-- Testikattavuus kasvanut, pylint reilassa!
+- Ohjelman voi asennusvaiheessa populoida demosisällöllä
+- Ohjelman voi onnistuneesti suorittaa kunhan on ensin asentanut
+- Käyttäjä voi luoda uuden noten
+- Käyttäjä voi muokata noten otsikkoa ja tekstisisältöä
+- Käyttäjä voi selata jo luotuja noteja listalla
+- Käyttäjä voi etsiä noteja hakutoiminnolla
+- Kaikki tallentuu reaaliajassa sqlite3-tietokantaan
 
 
 ## Dokumentaatio

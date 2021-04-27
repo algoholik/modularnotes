@@ -17,4 +17,6 @@
 | 18.4. |       2 | tietokantarepositorion puhtaaksikirjoittamista |
 | 19.4. |       5 | käyttöliittymämetodien refaktorointia, testien kirjoittamista |
 | 20.4. |       7 | käyttöliittymämetodien refaktorointia, testien kirjoittamista |
-|  Yht. |    66.5 | | 
+| 26.4. |       7 | pyqt-kirjaston opettelua, automaattisen tallennuksen toteutus |
+| 27.4. |       9 | käyttöliittymän selaus- ja muokkausnäkymien koodaus puhtaalta pöydältä |
+|  Yht. |    82.5 | | 

@@ -11,7 +11,7 @@ __pycache__
 /src/services/__pycache__/
 
 #pylint
-.pylintrc
+#.pylintrc
 
 #mac os specific
 .DS_Store
