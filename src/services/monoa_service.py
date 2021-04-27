@@ -41,6 +41,11 @@ class MonoaService:
         self._sort_notes()
         return self.notes
 
+    def get_latest_note_id(self) -> int:
+        self._sort_notes()
+        return int(self.notes[0].get_id())
+
+
     def get_note_by_id(self, n_id: int) -> Note:
         ''' Return note by id '''
         for note in self.notes:

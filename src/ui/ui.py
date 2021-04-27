@@ -125,6 +125,7 @@ class NoteListItem(QWidget):
         elif QMouseEvent.button() == Qt.RightButton:
             pass
 
+    # Under construction
     def keyReleaseEvent(self, QKeyEvent) -> None:
         if QKeyEvent:
             pass
@@ -208,7 +209,6 @@ class MonoaBrowser(QWidget):
         for note in self.notes_list_items:
             if note.get_note_id() == note_updated.get_id():
                 note.update_note(note_updated)
-
 
 
 class MonoaEditor(QVBoxLayout):
