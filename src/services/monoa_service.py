@@ -38,6 +38,9 @@ class MonoaService:
 
     def get_notes(self) -> list:
         ''' Return notes '''
+        if len(self.notes) == 0:
+            note = self.create_note("Welcome to MoNoA!", "Start writing...", datetime.now())
+        self._load_notes()
         self._sort_notes()
         return self.notes
 

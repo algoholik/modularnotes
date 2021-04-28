@@ -60,9 +60,11 @@ class NoteListItem(QWidget):
 
     def get_searchable_content(self) -> str:
         ''' Merge note id, name, content and datetime as one string to search from. '''
-        all_note_content = [str(self.note.get_id()),
-                            self.note.get_name().replace("\n", "").strip(),
-                            self.note.get_content().replace("\n", "").strip()]
+        all_note_content = [
+            str(self.note.get_id()),
+            self.note.get_name().replace("\n", "").strip(),
+            self.note.get_content().replace("\n", "").strip()
+        ]
         return " ".join(all_note_content).lower()
 
     def get_note_id(self) -> int:
@@ -116,17 +118,19 @@ class NoteListItem(QWidget):
             self.setStyleSheet("color: #333333; background-color: none;")
 
     def update_new_note_to_editor(self):
+        ''' Update editor with selected note thru a PyQt signal. '''
         self.signal_note_selected.emit(self.note)
 
     def mousePressEvent(self, QMouseEvent) -> None:
+        ''' On mouse click, update editor with selected note and make it active '''
         if QMouseEvent.button() == Qt.LeftButton:
             self.signal_note_selected.emit(self.note)
             self.activate()
         elif QMouseEvent.button() == Qt.RightButton:
             pass
 
-    # Under construction
     def keyReleaseEvent(self, QKeyEvent) -> None:
+        ''' Keyboard shortcuts for note list area. '''
         if QKeyEvent:
             pass
 
@@ -303,7 +307,6 @@ class MonoaMainWindow(QMainWindow):
 
     def update_window(self, note: Note):
         self.setWindowTitle(f"{MONOA_WINDOW_TITLE} - {note.get_name()}")
-        
 
     def _create_statusbar(self) -> None:
         ''' Create status bar at the bottom of the main window. '''
