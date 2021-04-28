@@ -76,3 +76,14 @@ poetry run invoke coverage-report
 
 
 Raportti generoituu projektin juurihakemistoon kansion _htmlcov_ alle.
+
+
+
+## Linting
+
+
+### Pylint 
+Linttaa komennolla:
+```bash
+poetry run invoke lint
+```
