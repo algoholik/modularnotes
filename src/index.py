@@ -3,7 +3,7 @@ MoNoA main app launcher
 '''
 import sys
 from PyQt5.QtWidgets import QApplication
-from ui.ui import MonoaMainWindow
+from ui.monoa_ui import MonoaMainWindow
 
 def main():
     '''
