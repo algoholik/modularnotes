@@ -1,15 +1,17 @@
 # Arkkitehtuurikuvaus
 
+
 ## Rakenne
 
 Sovelluksen rakenne jakaantuu kolmeen osaan:
 
 ![Pakkausrakenne](./kuvat/monoa_packaging.png)
 
-_ui_ -moduuli sisältää sovelluksen käyttöliittymäkoodin jaettuna luokittain eri alimoduleihin.
-_monoaservice_ -moduuli sisältää sovelluslogiikan ja toimii viestinviejänä tasojen 1 ja 3 välillä.
-_entities_ -moduuli pitää sisällään sovelluksessa käytetyt objektiluokat.
-_database_ -moduuli vastaa sovelluksen datan tallentamisesta tietokantatiedostoon.
+*ui* -moduuli sisältää sovelluksen käyttöliittymäkoodin jaettuna luokittain eri alimoduleihin.
+*monoa_service* -moduuli sisältää sovelluslogiikan ja toimii viestinviejänä tasojen 1 ja 3 välillä.
+*entities* -moduuli pitää sisällään sovelluksessa käytetyt objektiluokat.
+*database* -moduuli vastaa sovelluksen datan tallentamisesta tietokantatiedostoon.
+
 
 ## Käyttöliittymä
 
@@ -49,3 +51,17 @@ toiminnallisuuksien visualisoinnissa.
 8. MonoaTextEdit
    - Custom PyQt-luokka QTextEdit-luokan pohjalta, joka tarjoaa dynaamisesti tekstisisällön mukaan 
    venyvän tekstieditorin sekä aktiivisen rivin korostustoiminnallisuuden.
+
+
+## Sovelluslogiikka
+
+Sovelluslogiikasta vastaa pakkauksen *monoa_service* luokka _MonoaService_, tarjoten käyttöliittymälle 
+metodeja joilla tallentaa ja saada ajantasainen sisältö esiin käyttäjälle.
+
+_(Työn alla...)_
+
+
+## Tietojen tallentaminen
+
+Pakkaus *database.db_handler* tarjoaa sovelluslogiikasta huolehtivalle MonoaService -luokalle valikoiman 
+funktioita joilla käyttäjän luoma ja muokkaama data tallennetaan sqlite3 -tietokantatiedostoon.
