@@ -19,4 +19,8 @@
 | 20.4. |       7 | käyttöliittymämetodien refaktorointia, testien kirjoittamista |
 | 26.4. |       7 | pyqt-kirjaston opettelua, automaattisen tallennuksen toteutus |
 | 27.4. |       9 | käyttöliittymän selaus- ja muokkausnäkymien koodaus puhtaalta pöydältä |
-|  Yht. |    82.5 | | 
+| 29.4. |       5 | snipin lisäys noten sisään -toiminnallisuuden toteuttamista |
+|  2.5. |       5 | notet sisältämään ja käsittelemään snipit objekteina |
+|  3.5. |       8 | käyttöliittymän uudelleensuunnittelu selkeämmäksi ja uusien toimintojen lisäys |
+|  4.5. |       6 | docstring- ja pytest-kattavuuden kasvattamista ja koodin refaktorointia, käyttöohjeet |
+|  Yht. |   108.5 | | 

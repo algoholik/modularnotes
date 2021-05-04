@@ -5,24 +5,25 @@ muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (notes
 (snips).
 
 
-## Tilannekatsaus ti 27.4.2021
+## Tilannekatsaus ti 4.5.2021
 
-- Ohjelman voi asennusvaiheessa populoida demosisällöllä
-- Ohjelman voi onnistuneesti suorittaa kunhan on ensin asentanut
-- Käyttäjä voi luoda uuden noten
-- Käyttäjä voi muokata noten otsikkoa ja tekstisisältöä
-- Käyttäjä voi selata jo luotuja noteja listalla
+- Ohjelman voi onnistuneesti suorittaa kunhan on ensin tehnyt tarvittavat alustustoimenpiteet
+- Käyttäjä voi luoda uusia noteja
+- Käyttäjä voi muokata noten otsikkoa
+- Käyttäjä voi luoda uusia snippejä notejen sisään
+- Käyttäjä voi selata noteja listalla
 - Käyttäjä voi etsiä noteja hakutoiminnolla
 - Kaikki tallentuu reaaliajassa sqlite3-tietokantaan
 
 
 ## Uusin Release
 
-- [Release Viikko 5](https://github.com/algoholik/modularnotes/releases/tag/viikko5)
+- [Release Viikko 6](https://github.com/algoholik/modularnotes/releases/tag/viikko6)
 
 
 ## Dokumentaatio
 
+- [Käyttöohje](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/kayttoohje.md)
 - [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
 - [Arkkitehtuurikuvaus](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/arkkitehtuuri.md)
 - [Tuntikirjanpito](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/tuntikirjanpito.md)

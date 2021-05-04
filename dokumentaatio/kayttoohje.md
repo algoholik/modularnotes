@@ -41,3 +41,8 @@ palataan kaikki muistiinpanot näyttävään näkymään hakukentän oikean reun
 - Kaikki käyttäjän luomat notet ja snipit sekä niihin tehdyt muutokset tallentuvat automaattisesti.
 
 ![](./kuvat/monoa_in_action.png)
+
+- Käyttäjä voi myös muuttaa snippien järjestystä raahaamalla niitä haluaamansa järjestykseen. Tämä
+toiminto on kirjoitushetkellä (4.5.2021) kuitenkin vielä vaiheessa eikä toimi luotettavasti, eivätkä
+snippien järjestykseen tehdyt muutokset vielä tallennu.
+
