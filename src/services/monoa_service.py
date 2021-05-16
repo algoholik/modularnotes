@@ -69,11 +69,9 @@ class MonoaService:
 
     def update_note(self, note: Note) -> None:
         ''' Updates note in database. '''
-        print("trying to update note in db")
         contents = []
         for snip in note.get_contents():
             contents.append(str(snip.get_id()))
-            print(snip.get_id())
         db_handler.update_note(
             note.get_id(),
             note.get_title(),
@@ -118,7 +116,7 @@ class MonoaService:
     def _sort_notes_pro(self):
         def sort_by_date(note: Note):
             return note.get_modified()
-        return list(reversed(sorted(self.note_dict, key=sort_by_date())))
+        return list(reversed(sorted(self.note_dict, key=sort_by_date)))
 
     def _load_snips(self) -> None:
         ''' Load all snips from database. '''

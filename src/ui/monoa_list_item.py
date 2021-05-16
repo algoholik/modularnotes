@@ -1,12 +1,7 @@
-from datetime import datetime
 from PyQt5 import QtCore
-from PyQt5.QtGui import *
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import (QCursor, QMouseEvent)
 from PyQt5.QtWidgets import (QLabel, QWidget, QVBoxLayout)
-from services.monoa_service import monoa_service
 from entities.note import Note
-from config import SETTINGS_FILE_PATH
 
 class MonoaListItem(QWidget):
     '''
@@ -96,15 +91,18 @@ class MonoaListItem(QWidget):
             element.setVisible(False)
 
     def activate(self) -> None:
+        ''' Set note item active in list. '''
         if self.is_active == False:
             self.is_active = True
         self.update_active_note_selection()
 
     def deactivate(self) -> None:
+        ''' Set note item passive in list. '''
         self.is_active = False
         self.update_active_note_selection()
 
     def update_active_note_selection(self) -> None:
+        ''' Active vs. passive note item styling. '''
         if self.is_active == True:
             self.setStyleSheet("color: #ffffff; background-color: #333333;")
         else:
@@ -119,10 +117,3 @@ class MonoaListItem(QWidget):
         if QMouseEvent.button() == Qt.LeftButton:
             self.signal_note_selected.emit(self.note)
             self.activate()
-        elif QMouseEvent.button() == Qt.RightButton:
-            pass
-
-    def keyReleaseEvent(self, QKeyEvent) -> None:
-        ''' Keyboard shortcuts for note list area. '''
-        if QKeyEvent:
-            pass

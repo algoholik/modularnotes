@@ -35,33 +35,37 @@ toiminnallisuuksien visualisoinnissa.
    - MonoaBrowser vastaa notes-listauksen piirtämisestä ja toiminnallisuuksista.
 
 4. MonoaListItem
-   - MonoaListItem vastaa notes-listauksen yksittäisen noten esittämisestä sekä muutosten kommunikoinnista 
+   - MonoaListItem vastaa notes-listauksen yksittäisen noten esittämisestä sekä muutosten kommunikoinnista
    editorin ja sovelluslogiikan suuntaan.
 
 5. MonoaNoteViewer
    - Vastaa muokattavaksi valitun noten sisällön ja toiminnallisuuksien piirtämisestä.
 
 6. MonoaNoteContainer
-   - Vastaa snip-objektien esittämisestä listana muokkauksen alla olevan noten sisällä sekä snipeihin 
+   - Vastaa snip-objektien esittämisestä listana muokkauksen alla olevan noten sisällä sekä snipeihin
    kohdistuvista toiminnallisuuksista.
 
 7. MonoaSnipEditor
    - Vastaa yksittäisen noten sisältämän snipin piirtämisestä tietoineen ja toiminnallisuuksineen.
 
 8. MonoaTextEdit
-   - Custom PyQt-luokka QTextEdit-luokan pohjalta, joka tarjoaa dynaamisesti tekstisisällön mukaan 
+   - Custom PyQt-luokka QTextEdit-luokan pohjalta, joka tarjoaa dynaamisesti tekstisisällön mukaan
    venyvän tekstieditorin sekä aktiivisen rivin korostustoiminnallisuuden.
 
 
 ## Sovelluslogiikka
 
-Sovelluslogiikasta vastaa pakkauksen *monoa_service* luokka _MonoaService_, tarjoten käyttöliittymälle 
-metodeja joilla tallentaa ja saada ajantasainen sisältö esiin käyttäjälle.
+Sovelluslogiikasta vastaa pakkauksen *monoa_service* luokka _MonoaService_, tarjoten käyttöliittymälle
+metodeja joilla tallentaa ja saada ajantasainen sisältö esiin käyttäjälle. MonoaService-luokka keskustelee
+edelleen luokan _db-handler_ tarjoaa sovelluslogiikasta huolehtivalle MonoaService -luokalle valikoiman
+funktioita joilla käyttäjän luoma ja muokkaama data tallennetaan sqlite3 -tietokantatiedostoon.
 
-_(Työn alla...)_
-
+![Käyttöliittymäluokkien rakenne](./kuvat/monoaservice_loading.png)
 
 ## Tietojen tallentaminen
 
-Pakkaus *database.db_handler* tarjoaa sovelluslogiikasta huolehtivalle MonoaService -luokalle valikoiman 
-funktioita joilla käyttäjän luoma ja muokkaama data tallennetaan sqlite3 -tietokantatiedostoon.
+Tallentaminen on pyritty toteuttamaan priorisoiden tietokantatallennusta, tavoitteena se, että vaikka
+ohjelman suoritus keskeytyisi kesken kirjoittamisen, tallentuisi tietokantaan mahdollisimman viimeisin
+muokkaus.
+
+![Käyttöliittymäluokkien rakenne](./kuvat/monoaservice_saving.png)

@@ -1,15 +1,10 @@
-from datetime import datetime
 from PyQt5 import QtCore
-from PyQt5.QtGui import *
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import (QCursor, QMouseEvent)
 from PyQt5.QtWidgets import (
     QHBoxLayout, QLineEdit, QWidget, QPushButton, QVBoxLayout, QScrollArea
 )
 from services.monoa_service import monoa_service
 from entities.note import Note
-from config import SETTINGS_FILE_PATH
-
 from ui.monoa_list_item import MonoaListItem
 
 class MonoaBrowser(QWidget):

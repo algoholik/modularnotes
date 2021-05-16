@@ -1,10 +1,9 @@
 from PyQt5.QtWidgets import QTextEdit
 from PyQt5.QtGui import (QFontMetrics, QColor, QTextFormat)
 from PyQt5.QtCore import (Qt, QSize)
-#from PyQt5.Qsci import QsciScintilla, QsciLexerPython
 
 # Globals
-ROW_HIGHLIGHT_COLOR = QColor(Qt.yellow).lighter(160)
+ROW_HIGHLIGHT_COLOR = QColor(Qt.yellow).lighter(150)
 
 class MonoaTextEdit(QTextEdit):
     def __init__(self, parent = None):
@@ -13,6 +12,8 @@ class MonoaTextEdit(QTextEdit):
         self.cursorPositionChanged.connect(self.highlight_active_row)
 
     def highlight_active_row(self):
+        ''' Creates a secondary cursor that highlights the full row where the
+        primary cursor is. '''
         selections = []
         sel = QTextEdit.ExtraSelection()
         sel.format.setBackground(ROW_HIGHLIGHT_COLOR)
@@ -22,13 +23,16 @@ class MonoaTextEdit(QTextEdit):
         selections.append(sel)
         self.setExtraSelections(selections)
 
-    def setMinimumLines(self, num_lines):
-        self.setMinimumSize(self.minimumSize().width(), self.lineCountToWidgetHeight(num_lines))
+    def set_min_rows(self, num_rows):
+        ''' Overwrite PyQt setMinimumLines to respond to '''
+        self.setMinimumSize(self.minimumSize().width(), self.rows_to_widget_height(num_rows))
 
     def hasHeightForWidth(self):
+        ''' Overwrite PyQt hasHeightForWidth function to split snip edit areas evenly'''
         return True
 
     def heightForWidth(self, width):
+        ''' Overwrite PyQthgeightForWidth function to split snip edit areas evenly'''
         margins = self.contentsMargins()
         if width >= margins.left() + margins.right():
             document_width = width - margins.left() - margins.right()
@@ -39,10 +43,11 @@ class MonoaTextEdit(QTextEdit):
         return margins.top() + document.size().height() + margins.bottom()
 
     def sizeHint(self):
+        ''' Overwrite PyQt sizeHint. '''
         original_hint = super(MonoaTextEdit, self).sizeHint()
         return QSize(original_hint.width(), self.heightForWidth(original_hint.width()))
 
-    def lineCountToWidgetHeight(self, line_count):
+    def rows_to_widget_height(self, line_count):
         assert line_count >= 0
         widget_margins = self.contentsMargins()
         document_margin = self.document().documentMargin()

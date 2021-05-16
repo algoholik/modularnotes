@@ -4,8 +4,11 @@ MoNoA main app launcher
 import sys
 from PyQt5.QtWidgets import QApplication
 from ui.monoa_ui import MonoaMainWindow
+import warnings
+# Remove PyQt-related deprecation warning
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-def main():
+def main() -> None:
     '''
     MoNoA main() function
     - init instances of QApplication and MonoaMainWindow

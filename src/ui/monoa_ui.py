@@ -1,5 +1,4 @@
 from PyQt5 import QtCore
-from PyQt5.QtGui import *
 from PyQt5.QtWidgets import (QMainWindow, QStatusBar, QWidget, QHBoxLayout)
 from entities.snip import Snip
 from entities.note import Note
@@ -44,9 +43,8 @@ class MonoaUI(QWidget):
         self.parent().update_window(note)
 
     def _signal_handler_snip_updated(self, snip):
-        print("prööt")
-        #self.monoa_browser.update_active_note(snip)
-        #self.parent().update_window(snip)
+        self.monoa_browser.update_active_note(snip)
+        self.parent().update_window(snip)
 
 
 class MonoaMainWindow(QMainWindow):

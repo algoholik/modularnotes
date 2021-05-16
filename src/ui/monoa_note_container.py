@@ -1,8 +1,8 @@
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
-QLineEdit, QWidget, QHBoxLayout, QPushButton, QVBoxLayout, QScrollArea, QFileDialog,
-QMessageBox
+    QLineEdit, QWidget, QHBoxLayout, QPushButton, QVBoxLayout, QScrollArea,
+    QFileDialog, QMessageBox
 )
 from services.monoa_service import monoa_service
 from entities.snip import Snip
@@ -51,7 +51,6 @@ class MonoaNoteContainer(QWidget):
         self.snips_container_frame = QWidget()
         self.snips_container_frame.setObjectName("ContainerFrame")
 
-
         self.snips_v_box = QVBoxLayout()
         self.snips_v_box.setDirection(QVBoxLayout.TopToBottom)
         self.snips_container_frame.setLayout(self.snips_v_box)
@@ -65,6 +64,11 @@ class MonoaNoteContainer(QWidget):
         self.scroll_area.setWidgetResizable(True)
         self.scroll_area.setWidget(self.snips_container_frame)
 
+        # Load note viewer with snips assigned to it
+        self._setup_snips()
+        self._populate_note_contents()
+
+    def _setup_snips(self) -> None:
         # Main layout for container class
         self.container_v_box = QVBoxLayout()
         self.container_v_box.setSpacing(0)
@@ -74,10 +78,7 @@ class MonoaNoteContainer(QWidget):
         self.container_v_box.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.container_v_box)
 
-        # Load note viewer with snips assigned to it
-        self._populate_note_contents()
-
-    def create_snip(self):
+    def create_snip(self) -> None:
         new_snip = MonoaSnipEditor(monoa_service.create_snip_inside_note(self.note.get_id()))
         new_snip_pos = self.snips_v_box.count() + 1
         self.snips_v_box.insertWidget(new_snip_pos, new_snip, 0)
@@ -106,12 +107,6 @@ class MonoaNoteContainer(QWidget):
         self.note.set_title(self.note_title.text())
         self.signal_note_updated.emit(self.note)
         monoa_service.update_note(self.note)
-        #self._update_browser()
-
-    def _update_browser(self) -> None:
-        pass
-        #self.signal_note_updated.emit(self.note)
-        #monoa_service.update_note(self.note)
 
     def _update_note_view(self) -> None:
         self._init_note_view()

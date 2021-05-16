@@ -1,15 +1,11 @@
-from datetime import datetime
 from PyQt5 import QtCore
-from PyQt5.QtCore import (Qt, QMimeData, QSize)
+from PyQt5.QtCore import (Qt, QMimeData)
 from PyQt5.QtGui import (
     QDrag, QPixmap, QPainter, QTextCursor, QFontMetrics, QFontDatabase
 )
-from PyQt5.QtWidgets import (
-    QLabel, QLineEdit, QHBoxLayout, QTextEdit, QPushButton, QVBoxLayout, QDialog, QFrame, QWidget,
-)
+from PyQt5.QtWidgets import (QLabel, QHBoxLayout, QVBoxLayout, QFrame, QWidget)
 from services.monoa_service import monoa_service
 from entities.snip import Snip
-from entities.note import Note
 from ui.monoa_text_edit import MonoaTextEdit
 from ui.monoa_styles import CSS
 
@@ -26,7 +22,7 @@ class MonoaSnipEditor(QFrame):
         self.snip = snip
 
         self.snip_editor = MonoaTextEdit()
-        self.snip_editor.setMinimumLines(1)
+        self.snip_editor.set_min_rows(1)
         self.snip_editor.setObjectName("TaskDescription")
         self.snip_editor.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.snip_editor.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -42,11 +38,6 @@ class MonoaSnipEditor(QFrame):
             QFontMetrics(self.snip_editor.font()).horizontalAdvance(' ') * 4
         )
         self.snip_editor.moveCursor(QTextCursor.End)
-
-        #btn_edit_snip = QPushButton("Edit")  # QIcon("images/three_dots.png"), None
-        #btn_edit_snip.setMaximumSize(30, 30)
-        #btn_edit_snip.clicked.connect(self.specifyTaskInfo)
-        #delete_task_button.clicked.connect(self.deleteTaskItem)
 
         self.label_snip_id = QLabel(f"Snip #{str(self.snip.get_id())}")
         self.label_snip_id.setObjectName("SnipId")
@@ -84,19 +75,18 @@ class MonoaSnipEditor(QFrame):
         self.snip_editor.setText(self.snip.get_content())
 
     def _autosave_snip(self) -> None:
+        ''' Updates snip object and triggers note browser update. '''
         self.snip.set_content(self.snip_editor.toPlainText())
-        self._update_browser()
-
-    def _update_browser(self) -> None:
         self.signal_snip_updated.emit(self.snip)
         monoa_service.update_snip(self.snip)
-        print("snip autosave")
 
-    def mousePressEvent(self, event):
+    def mousePressEvent(self, event) -> None:
+        ''' Locates draggable widget by cursor location on mouse click. '''
         if event.button() == Qt.LeftButton:
             self.drag_start_position = event.pos()
 
-    def mouseMoveEvent(self, event):
+    def mouseMoveEvent(self, event) -> None:
+        ''' Draws a copy of snip editor for showing while drag & drop. '''
         drag = QDrag(self)
         mime_data = QMimeData()
         drag.setMimeData(mime_data)
