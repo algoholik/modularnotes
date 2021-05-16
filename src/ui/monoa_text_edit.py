@@ -6,6 +6,7 @@ from PyQt5.QtCore import (Qt, QSize)
 ROW_HIGHLIGHT_COLOR = QColor(Qt.yellow).lighter(150)
 
 class MonoaTextEdit(QTextEdit):
+    ''' CUstom QTextEdit class with row highlighting and dynamically resized editor. '''
     def __init__(self, parent = None):
         super(MonoaTextEdit, self).__init__(parent)
         self.textChanged.connect(lambda: self.updateGeometry())
@@ -32,7 +33,7 @@ class MonoaTextEdit(QTextEdit):
         return True
 
     def heightForWidth(self, width):
-        ''' Overwrite PyQthgeightForWidth function to split snip edit areas evenly'''
+        ''' Overwrite PyQt heightForWidth function to split snip edit areas evenly'''
         margins = self.contentsMargins()
         if width >= margins.left() + margins.right():
             document_width = width - margins.left() - margins.right()
@@ -48,6 +49,7 @@ class MonoaTextEdit(QTextEdit):
         return QSize(original_hint.width(), self.heightForWidth(original_hint.width()))
 
     def rows_to_widget_height(self, line_count):
+        ''' Calculate editor height based on font metrics '''
         assert line_count >= 0
         widget_margins = self.contentsMargins()
         document_margin = self.document().documentMargin()

@@ -27,6 +27,7 @@ muistiinpanojaan (ja ajatustyötään) koostamalla isompia kokonaisuuksia (notes
 - [Käyttöohje](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/kayttoohje.md)
 - [Vaatimusmäärittely](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/vaatimusmaarittely.md)
 - [Arkkitehtuurikuvaus](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/arkkitehtuuri.md)
+- [Testausdokumentaatio](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/testaus.md)
 - [Tuntikirjanpito](https://github.com/algoholik/modularnotes/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 

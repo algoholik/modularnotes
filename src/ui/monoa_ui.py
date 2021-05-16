@@ -37,6 +37,7 @@ class MonoaUI(QWidget):
 
     def _signal_handler_note_selected(self, note):
         self.monoa_viewer.update_note(note)
+        self.monoa_viewer.
 
     def _signal_handler_note_updated(self, note):
         self.monoa_browser.update_active_note(note)
