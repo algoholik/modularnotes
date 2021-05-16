@@ -23,7 +23,6 @@ class MonoaService:
         self._load_notes()
         self._autocreate_note_if_none()
 
-
     def create_note(self, title: str) -> Note:
         ''' Create a new note by doing the following:
             1. Creates a new note in database to receive a unique id.
@@ -70,9 +69,11 @@ class MonoaService:
 
     def update_note(self, note: Note) -> None:
         ''' Updates note in database. '''
+        print("trying to update note in db")
         contents = []
         for snip in note.get_contents():
             contents.append(str(snip.get_id()))
+            print(snip.get_id())
         db_handler.update_note(
             note.get_id(),
             note.get_title(),
@@ -113,6 +114,11 @@ class MonoaService:
                                                 snips,
                                                 note['modified']
                                             )
+
+    def _sort_notes_pro(self):
+        def sort_by_date(note: Note):
+            return note.get_modified()
+        return list(reversed(sorted(self.note_dict, key=sort_by_date())))
 
     def _load_snips(self) -> None:
         ''' Load all snips from database. '''
@@ -155,6 +161,13 @@ class MonoaService:
         )
         self._load_snips()
         self._sort_snips()
+
+    def render_textfile_contents(self, note_id: int) -> str:
+        ''' Returns note contents as a string for file exporting. '''
+        contents: list = []
+        for snip in self.get_note_by_id(note_id).get_contents():
+            contents.append(snip.get_content())
+        return "\n".join(contents)
 
 # One and only instance of this class
 monoa_service = MonoaService()

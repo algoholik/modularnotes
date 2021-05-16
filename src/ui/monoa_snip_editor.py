@@ -90,6 +90,7 @@ class MonoaSnipEditor(QFrame):
     def _update_browser(self) -> None:
         self.signal_snip_updated.emit(self.snip)
         monoa_service.update_snip(self.snip)
+        print("snip autosave")
 
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
@@ -97,12 +98,11 @@ class MonoaSnipEditor(QFrame):
 
     def mouseMoveEvent(self, event):
         drag = QDrag(self)
-        drag.setDragCursor(QPixmap("images/drag.png"), Qt.MoveAction) 
         mime_data = QMimeData()
         drag.setMimeData(mime_data)
         pixmap = QPixmap(self.size())
         painter = QPainter(pixmap)
-        painter.drawPixmap(self.rect(), self.grab()) 
+        painter.drawPixmap(self.rect(), self.grab())
         painter.end()
         drag.setPixmap(pixmap)
         drag.setHotSpot(event.pos())

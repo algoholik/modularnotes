@@ -12,6 +12,7 @@ class MonoaListItem(QWidget):
     '''
     Notes list item widget class
     '''
+    signal_note_updated = QtCore.pyqtSignal(Note)
     signal_note_selected = QtCore.pyqtSignal(Note)
     def __init__(self, note: Note):
         super(MonoaListItem, self).__init__()
@@ -39,6 +40,8 @@ class MonoaListItem(QWidget):
         self.note_content.setStyleSheet("font-size: 13px; font-weight: normal; margin: 0; padding: 0;")
         self.note_content.setWordWrap(True)
         self.note_content.setMaximumWidth(320)
+
+        self.signal_note_updated.connect(self.update_note)
 
         # Update selected note list item.
         self.update_active_note_selection()
@@ -93,7 +96,7 @@ class MonoaListItem(QWidget):
             element.setVisible(False)
 
     def activate(self) -> None:
-        if self.is_active == False: 
+        if self.is_active == False:
             self.is_active = True
         self.update_active_note_selection()
 

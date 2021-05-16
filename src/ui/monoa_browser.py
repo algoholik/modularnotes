@@ -9,8 +9,6 @@ from PyQt5.QtWidgets import (
 from services.monoa_service import monoa_service
 from entities.note import Note
 from config import SETTINGS_FILE_PATH
-from ui.monoa_text_edit import MonoaTextEdit
-import utils
 
 from ui.monoa_list_item import MonoaListItem
 
@@ -19,6 +17,7 @@ class MonoaBrowser(QWidget):
     Monoa Note browser class
     '''
     signal_note_selected = QtCore.pyqtSignal(Note)
+    signal_note_updated = QtCore.pyqtSignal(Note)
     def __init__(self):
         super().__init__()
         self.setMaximumWidth(360)
@@ -99,6 +98,7 @@ class MonoaBrowser(QWidget):
                 item.activate()
 
     def _signal_handler_note_selected(self, note: Note) -> None:
+        print("new note selected")
         self.signal_note_selected.emit(note)
         for item in self.notes_list_items:
             if item.get_note_id() != note.get_id():

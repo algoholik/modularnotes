@@ -5,10 +5,10 @@ CONNECTION = get_db_connection()
 
 def create_snip(sniptype: int, content: str, modified: datetime):
     '''
-    Create new snip and return it
+    Create new snip in database and return it
     '''
     cur = CONNECTION.cursor()
-    sql = """   INSERT INTO Snips (sniptype, content, modified) 
+    sql = """   INSERT INTO Snips (sniptype, content, modified)
                 VALUES (:sniptype, :content, :modified) """
     inj = {
         "sniptype": sniptype,
@@ -23,17 +23,17 @@ def create_snip(sniptype: int, content: str, modified: datetime):
 
 def update_snip(id: int, sniptype: int, content: str, modified: datetime):
     '''
-    Update by id snip in database
+    Update snip by id in database
     '''
     cur = CONNECTION.cursor()
-    sql =   """   
-                UPDATE Snips 
-                SET sniptype=:sniptype, content=:content, modified=:modified 
-                WHERE id=:id 
+    sql =   """
+                UPDATE Snips
+                SET sniptype=:sniptype, content=:content, modified=:modified
+                WHERE id=:id
             """
-    res = cur.execute(sql, {"sniptype": sniptype, 
-                            "content": content, 
-                            "modified": modified, 
+    res = cur.execute(sql, {"sniptype": sniptype,
+                            "content": content,
+                            "modified": modified,
                             "id": id})
     CONNECTION.commit()
 
@@ -49,12 +49,12 @@ def load_snips():
 
 def create_note(title: str, contents: list, modified: datetime):
     '''
-    Create note
+    Create note in database and return it
     '''
     cur = CONNECTION.cursor()
-    sql =   """ 
-                INSERT INTO Notes (title, contents, modified) 
-                VALUES (:title, :contents, :modified) 
+    sql =   """
+                INSERT INTO Notes (title, contents, modified)
+                VALUES (:title, :contents, :modified)
             """
     inj =   {
                 "title": title,
@@ -72,14 +72,14 @@ def update_note(id: int, title: str, contents: list, modified: datetime):
     Update note
     '''
     cur = CONNECTION.cursor()
-    sql =   """   
-                    UPDATE Notes 
-                    SET title=:title, contents=:contents, modified=:modified 
+    sql =   """
+                    UPDATE Notes
+                    SET title=:title, contents=:contents, modified=:modified
                     WHERE id=:id
                 """
-    res = cur.execute(sql, {"title": title, 
-                            "contents": ";".join([str(snip) for snip in contents]), 
-                            "modified": modified, 
+    res = cur.execute(sql, {"title": title,
+                            "contents": ";".join([str(snip) for snip in contents]),
+                            "modified": modified,
                             "id": id})
     CONNECTION.commit()
 
